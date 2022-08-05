@@ -13,4 +13,6 @@ def marvhiee(request):
     return HttpResponse("Hello, Marvhiee!")
 
 def greet(request, name):
-    return HttpResponse(f"Hello, {name.capitalize()}!")
+    return render(request, "hello/greet.html", {
+        "name": name.capitalize()
+    })
